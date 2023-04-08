@@ -3230,18 +3230,18 @@
       function CheckTime(){
         if(mouse1 == mouse2){
           currentSecond = currentSecond+5000;   //每隔5秒+5秒
+          
           if(currentSecond>timeout){
-            clearInterval(eventID);
-            
-            //執行登出function
-            doLogout();
 
-            // 使用confirm()方式通知保持窗口存在，而不是alert()的方式
+            clearInterval(eventID);   //停止循环检查
+            currentSecond = 0;   //设置回检查时间为0
+            
+            //使用confirm()方式通知保持窗口存在，而不是alert()的方式
             setTimeout(function () {
-              if (confirm("You have not operated more than 5 minutes, Back to login page.") == true) {
-                document.location.reload();
+              if (confirm('You have not operated more than 5 minutes, Back to login page soon.\n\nClick "OK" to stay in.') == true) {
+                StartPoint();   //重新执行
               } else {
-                document.location.reload();
+                doLogout();   //執行登出function
               }
             }, 2000);   //setTimeout("要執行的代碼", 2000) = 延遲2秒 
           }
@@ -3252,7 +3252,7 @@
         }
       }
 
-      function StartPoint(){    //一旦成功登錄就啓動每隔1秒檢查是否沒操作
+      function StartPoint(){    //一旦成功登錄就啓動每隔5秒檢查是否沒操作
         mouse1 = "";
         mouse2 = "";
         eventID = setInterval(CheckTime,5000);    //每隔5秒
