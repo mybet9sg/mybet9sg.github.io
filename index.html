@@ -472,8 +472,8 @@
         overflow-x: scroll;
         overflow-y: hidden;
         position: relative;
-        height: 500px;
-
+        height: 530px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
       }
       .game_title {
         overflow: hidden;
@@ -481,18 +481,35 @@
       }
       /* Game Title style */
       .game_title table {
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
+        background: linear-gradient(rgb(73, 73, 73) 20%, black 100%);
         width: 3653px;   /* 一个div (宽200px + border 2px + y-rollbar 17px) */
       }
       .game_title table th:not(#imagetitle1) {   /* 除了第一个空白th */
-        padding: 5px 0 5px 0;
-        border: #ddd solid 1px;
+        border: #4a4a4a solid 1px;
         width: 200px;
         float: left;   /* th向左靠 */
-
+      }
+      .game_title table div {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .game_title table img {
+        max-width: 120px;
+        max-height: 50px;
+        margin: auto 0;
+      }
+      .game_title table p {
+        background-color: #ffffff;
+        width: 100px;
+        color: #000;
+        font-size: 15px;
+        margin-bottom: 10px;
+        padding: 2px 5px;
+        border: #7c7c7c solid 1px;
+        border-radius: 8px;
       }
       #myImageUL {
         background-color: #000;
@@ -517,11 +534,12 @@
         padding: 0 10px 0 10px;
         width: 180px;
         height: 50000px;
+        padding-top: 30px;
         margin: 0 1px;
       }
       /* 暂时隐藏内部标题 */
       #myImageUL lo {
-        color: transparent;
+        display: none;
       }
       #myImageUL li {
         height: 180px;
@@ -951,24 +969,24 @@
                 <thead>
                   <tr>
                     <th id="imagetitle1" style="display: none;"></th>
-                    <th id="imagetitle2" style="display: block;"><div>VPOWER</div></th>
-                    <th id="imagetitle3" style="display: block;"><div>XE88</div></th>
-                    <th id="imagetitle4" style="display: block;"><div>918KAYA</div></th>
-                    <th id="imagetitle5" style="display: block;"><div>918KISS</div></th>
-                    <th id="imagetitle6" style="display: block;"><div>3WIN8</div></th>
-                    <th id="imagetitle7" style="display: block;"><div>MEGA888</div></th>
-                    <th id="imagetitle8" style="display: block;"><div>MARIO CLUB</div></th>
-                    <th id="imagetitle9" style="display: block;"><div>SPADE GAMING</div></th>
-                    <th id="imagetitle10" style="display: block;"><div>JDB SLOT</div></th>
-                    <th id="imagetitle11" style="display: block;"><div>PRAGMATIC PLAY</div></th>
-                    <th id="imagetitle12" style="display: block;"><div>JILI SLOT</div></th>
-                    <th id="imagetitle13" style="display: block;"><div>FA CHAI</div></th>
-                    <th id="imagetitle14" style="display: block;"><div>EVO888</div></th>
-                    <th id="imagetitle15" style="display: block;"><div>PUSSY888</div></th>
-                    <th id="imagetitle16" style="display: block;"><div>PEGASUS</div></th>
-                    <th id="imagetitle17" style="display: block;"><div>ACE333</div></th>
-                    <th id="imagetitle18" style="display: block;"><div>NEXTSPIN</div></th>
-                    <th id="imagetitle19" style="display: block;"><div>LIVE22</div></th>
+                    <th id="imagetitle2" style="display: block;"><div><img src="images/platform_logo/vpower.png"><p>VPOWER</p></div></th>
+                    <th id="imagetitle3" style="display: block;"><div><img src="images/platform_logo/xe88_logo.png"><p>XE88</p></div></th>
+                    <th id="imagetitle4" style="display: block;"><div><img src="images/platform_logo/918kaya_logo.png"><p>918KAYA</p></div></th>
+                    <th id="imagetitle5" style="display: block;"><div><img src="images/platform_logo/918kiss_logo.png"><p>918KISS</p></div></th>
+                    <th id="imagetitle6" style="display: block;"><div><img src="images/platform_logo/3win8_logo.png"><p>3WIN8</p></div></th>
+                    <th id="imagetitle7" style="display: block;"><div><img src="images/platform_logo/mega888_logo.png"><p>MEGA888</p></div></th>
+                    <th id="imagetitle8" style="display: block;"><div><img src="images/platform_logo/marioclub_logo.png"><p>MARIO CLUB</p></div></th>
+                    <th id="imagetitle9" style="display: block;"><div><img src="images/platform_logo/spadegaming_logo.png"><p>SPADE GAMING</p></div></th>
+                    <th id="imagetitle10" style="display: block;"><div><img src="images/platform_logo/jdbslot_logo.png"><p>JDB SLOT</p></div></th>
+                    <th id="imagetitle11" style="display: block;"><div><img src="images/platform_logo/pragmaticplay_logo.png"><p>PRAGMATIC PLAY</p></div></th>
+                    <th id="imagetitle12" style="display: block;"><div><img src="images/platform_logo/jilisot_logo.png"><p>JILI SLOT</p></div></th>
+                    <th id="imagetitle13" style="display: block;"><div><img src="images/platform_logo/fachai_logo.png"><p>FA CHAI</p></div></th>
+                    <th id="imagetitle14" style="display: block;"><div><img src="images/platform_logo/evo888_logo.png"><p>EVO888</p></div></th>
+                    <th id="imagetitle15" style="display: block;"><div><img src="images/platform_logo/pussy888_logo.png"><p>PUSSY888</p></div></th>
+                    <th id="imagetitle16" style="display: block;"><div><img src="images/platform_logo/pegasus_logo.png"><p>PEGASUS</p></div></th>
+                    <th id="imagetitle17" style="display: block;"><div><img src="images/platform_logo/ace333_logo.png"><p>ACE333</p></div></th>
+                    <th id="imagetitle18" style="display: block;"><div><img src="images/platform_logo/nextspin_logo.png"><p>NEXTSPIN</p></div></th>
+                    <th id="imagetitle19" style="display: block;"><div><img src="images/platform_logo/live22_logo.png"><p>LIVE22</p></div></th>
                   </tr>
                 </thead>
               </table>
